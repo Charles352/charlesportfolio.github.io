@@ -1,0 +1,205 @@
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-sans); color: var(--text-primary); background: transparent; }
+
+  .hero {
+    background: #0d1b2a;
+    color: #fff;
+    padding: 3.5rem 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: #1a3a5c;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 30%;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: #112233;
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+  .avatar {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: #1d5fa6;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; font-weight: 500; color: #e6f1fb;
+    margin-bottom: 1.25rem;
+    border: 2px solid #378add;
+  }
+  .hero h1 { font-size: 2rem; font-weight: 500; letter-spacing: -0.5px; margin-bottom: 0.4rem; }
+  .hero .title { font-size: 1rem; color: #7ab8f0; margin-bottom: 1.25rem; font-weight: 400; }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 16px; }
+  .contact-pill {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 13px; color: #b5d4f4;
+  }
+  .contact-pill i { font-size: 15px; color: #378add; }
+
+  .content { max-width: 700px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+
+  .section { margin-top: 2.5rem; }
+  .section-label {
+    font-size: 11px; font-weight: 500; letter-spacing: 1.2px;
+    text-transform: uppercase; color: var(--text-muted);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .job { margin-bottom: 1.75rem; }
+  .job-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 4px; margin-bottom: 0.25rem; }
+  .job-title { font-size: 15px; font-weight: 500; color: var(--text-primary); }
+  .job-date { font-size: 12px; color: var(--text-muted); white-space: nowrap; }
+  .job-company { font-size: 13px; color: var(--text-accent, #185FA5); margin-bottom: 0.6rem; }
+  .job ul { padding-left: 1.1rem; }
+  .job li { font-size: 13.5px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 0.35rem; }
+
+  .edu-block { display: flex; align-items: flex-start; gap: 12px; }
+  .edu-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--bg-accent, #E6F1FB);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .edu-icon i { font-size: 18px; color: var(--text-accent, #185FA5); }
+  .edu-name { font-size: 15px; font-weight: 500; }
+  .edu-sub { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+
+  .skills-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.25rem; }
+  .skill-chip {
+    font-size: 12.5px;
+    background: var(--surface-1);
+    border: 0.5px solid var(--border);
+    border-radius: 20px;
+    padding: 4px 12px;
+    color: var(--text-secondary);
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+    margin: 1.5rem 0;
+  }
+  .stat-card {
+    background: var(--surface-1);
+    border-radius: var(--radius);
+    padding: 0.85rem 1rem;
+  }
+  .stat-num { font-size: 22px; font-weight: 500; color: #185FA5; }
+  .stat-label { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
+</style>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="avatar">CC</div>
+    <h1>Charles Chege</h1>
+    <p class="title">Dispatch Officer &amp; Field Technician · Nairobi, Kenya</p>
+    <div class="contact-row">
+      <span class="contact-pill"><i class="ti ti-phone" aria-hidden="true"></i> +254 0110344265</span>
+      <span class="contact-pill"><i class="ti ti-mail" aria-hidden="true"></i> charlescheqe455@gmail.com</span>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-num">3,000+</div>
+      <div class="stat-label">Tickets coordinated monthly</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">98%</div>
+      <div class="stat-label">On-time delivery rate</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">50+</div>
+      <div class="stat-label">WiFi installs per month</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">60%</div>
+      <div class="stat-label">Internet speed increase delivered</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Work experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Dispatch Officer</span>
+        <span class="job-date">Jan 2026 – Present</span>
+      </div>
+      <div class="job-company">Adrian Kenya Limited · Nairobi</div>
+      <ul>
+        <li>Coordinated timely dispatch of over 3,000 Safaricom tickets monthly across Nairobi East, achieving 98% on-time delivery.</li>
+        <li>Managed and oversaw 10 teams per day, maintaining team harmony and boosting quarterly output.</li>
+        <li>Reduced manual errors by 25% and supported resolution of over 2,000 tickets per month through improved field team coordination.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Field Technician</span>
+        <span class="job-date">Aug 2024 – Dec 2025</span>
+      </div>
+      <div class="job-company">Adrian Kenya Limited · Nairobi</div>
+      <ul>
+        <li>Delivered hardware upgrades and configuration improvements that increased internet speeds by up to 60% for 250+ users monthly.</li>
+        <li>Raised customer satisfaction scores by 15% through targeted fiber troubleshooting and durable, permanent solutions.</li>
+        <li>Completed 50+ WiFi installations per month with 100% adherence to timelines, boosting customer satisfaction by 25%.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Electrician on Site</span>
+        <span class="job-date">Prior experience</span>
+      </div>
+      <div class="job-company">Instant Lighting Agencies · Nairobi</div>
+      <ul>
+        <li>Performed electrical installations including conduit fittings for safe and efficient wiring systems.</li>
+        <li>Installed and configured audio devices, ensuring proper wiring and optimal sound performance.</li>
+        <li>Fitted electrical sockets and switches with safe, correctly wired operation.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Education</div>
+    <div class="edu-block">
+      <div class="edu-icon"><i class="ti ti-school" aria-hidden="true"></i></div>
+      <div>
+        <div class="edu-name">Nairobi Technical Training Institute</div>
+        <div class="edu-sub">Electrical &amp; Electronics Engineering – Power Option &nbsp;·&nbsp; Credit grade</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Skills</div>
+    <div class="skills-wrap">
+      <span class="skill-chip">Dispatch coordination</span>
+      <span class="skill-chip">Fiber optic splicing</span>
+      <span class="skill-chip">WiFi installation</span>
+      <span class="skill-chip">Electrical systems</span>
+      <span class="skill-chip">Team management</span>
+      <span class="skill-chip">Problem solving</span>
+      <span class="skill-chip">System optimization</span>
+      <span class="skill-chip">Communication &amp; collaboration</span>
+      <span class="skill-chip">Electrical safety protocols</span>
+      <span class="skill-chip">Networking technologies</span>
+    </div>
+  </div>
+
+</div>
